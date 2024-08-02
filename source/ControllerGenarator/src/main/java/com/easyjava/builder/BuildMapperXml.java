@@ -212,7 +212,7 @@ public class BuildMapperXml {
                 }
             }
             if (autoIncrementField != null) {
-                bw.write("\t\t<selectKey keyProperty=\"bean." + autoIncrementField.getFieldName() + "\" resultType=\"" + autoIncrementField.getJavaType() + "\" order=\"AFTER\">");
+                bw.write("\t\t<selectKey keyProperty=\"bean." + autoIncrementField.getPropertyName() + "\" resultType=\"" + autoIncrementField.getJavaType() + "\" order=\"AFTER\">");
                 bw.newLine();
                 bw.write("\t\t\tselect last_insert_id()");
                 bw.newLine();
