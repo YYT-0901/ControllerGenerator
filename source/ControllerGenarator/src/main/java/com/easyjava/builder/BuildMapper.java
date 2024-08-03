@@ -34,12 +34,17 @@ public class BuildMapper {
             bw.newLine();
             bw.newLine();
 
+            bw.write("import org.apache.ibatis.annotations.Mapper;");
+            bw.newLine();
             bw.write("import org.apache.ibatis.annotations.Param;");
             bw.newLine();
 
 
             // 构建类注释
             BuildComment.createClassComment(bw, tableInfo.getComment() + "Mapper");
+            bw.newLine();
+            bw.write("@Mapper");
+            bw.newLine();
             bw.write("public interface " + tableInfo.getBeanName() + Constants.SUFFIX_MAPPERS + "<T, P> extends BaseMapper {");
             bw.newLine();
 
