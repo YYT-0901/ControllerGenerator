@@ -53,9 +53,3 @@
 
 
 `/表明/delete{驼峰表名}By{主键}`(s)
-
-
-
----
-
-学习视频: https://www.bilibili.com/video/BV1EN4y1c7sL/

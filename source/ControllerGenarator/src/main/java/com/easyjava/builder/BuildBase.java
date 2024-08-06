@@ -89,6 +89,12 @@ public class BuildBase {
         headerInfoList.add("import " + Constants.PACKAGE_VO + ".ResponseVO");
         headerInfoList.add("import " + Constants.PACKAGE_EXCEPTION + ".BusinessException");
         build(headerInfoList, "AGlobalExceptionHandlerController", Constants.PATH_CONTROLLER);
+
+        // 生成VerifyRegexEnum枚举
+        headerInfoList.clear();
+
+        headerInfoList.add("package " + Constants.PACKAGE_ENUMS);
+        build(headerInfoList, "VerifyRegexEnum", Constants.PATH_ENUMS);
     }
 
     private static void build(List<String> headerInfoList, String fileName, String outPutPath) {
